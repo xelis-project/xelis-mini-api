@@ -46,7 +46,7 @@ export default {
 			try {
 				const res = await this.fetchInfo()
 				const data = await res.json()
-				let circulating_supply = data['result2']['circulating_supply'] // this is in atomic value
+				let circulating_supply = data['result']['circulating_supply'] // this is in atomic value
 				circulating_supply = parseFloat(circulating_supply) / Math.pow(10, 8)
 				const expirationTtl = 300 // expiration for 5min
 				await env.API.put(`circulating_supply`, circulating_supply, { expirationTtl })
