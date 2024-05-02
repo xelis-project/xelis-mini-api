@@ -1,0 +1,7 @@
+name = "xelis-mini-api"
+compatibility_date = "2023-10-17"
+main = "./src/index.js"
+
+kv_namespaces = [
+  { binding = "API", id = "2853ebf696ff4b8391b982bfd819adcf" }
+]
